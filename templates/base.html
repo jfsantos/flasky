@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.css" type="text/css"/>
+    {% if EXTRA_HEADER %}
+    {{ EXTRA_HEADER }}
+    {% endif %}
+    {% if article and article.latex %}
+        {{ article.latex }}
+    {% endif %}
+    {% if page and page.latex %}
+        {{ page.latex }}
+    {% endif %}
   </head>
   <body>
     <div class=container>
